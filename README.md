@@ -2,7 +2,7 @@ fluent-plugin-boundio
 =====================
 
 ## Component
-Fluent Input plugin to make a call with boundio by KDDI. This Multilingual speech synthesis system uses VoiceText.
+Fluentd Output plugin to make a call with boundio by KDDI. This Multilingual speech synthesis system uses VoiceText.
 
 ## Installation
 
