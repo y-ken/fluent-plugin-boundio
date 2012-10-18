@@ -31,6 +31,8 @@ gem install fluent-plugin-boundio
   api_key         YOUR_BOUNDIO_API_KEY
   user_key        YOUR_BOUNDIO_USER_KEY
   default_number  09012345678
+  # http://boundio.jp/docs/%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%84%E3%83%BC%E3%83%AB
+  developer_tool  yes
 </match>
 `````
 
