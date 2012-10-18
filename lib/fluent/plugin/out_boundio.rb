@@ -10,15 +10,15 @@ class Fluent::BoundioOutput < Fluent::Output
 
   def initialize
     super
-
     require 'uri'
     require 'net/https'
   end
 
   def configure(conf)
     super
-    @developer_tool = Fluent::Config.bool_value(@developer_tool) || false
     @voice_type = 1
+    @developer_tool = Fluent::Config.bool_value(@developer_tool) || false
+    $log.info "boundio using developer tool api" if @developer_tool
   end
 
   def emit(tag, es, chain)
@@ -38,10 +38,10 @@ class Fluent::BoundioOutput < Fluent::Output
       query = 'key=' + @api_key + '&tel_to=' + number + '&cast=' + cast
       path = @developer_tool ? '/api/vd2/' : '/api/v2/'
       response = https.post(path + @user_serial_id + '/call', URI.escape(query))
-      $log.info "boundio makeing a call: #{path} #{message} "
+      $log.info "boundio makeing a call: #{message} "
       $log.info "boundio call result: #{response.body}"
     rescue => e
-      $log.error("Boundio Error: #{e.message}")
+      $log.error("boundio Error: #{e.message}")
     end
   end
 end

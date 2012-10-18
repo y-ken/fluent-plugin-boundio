@@ -36,9 +36,12 @@ gem install fluent-plugin-boundio
 </match>
 `````
 
-### Debug
+### Quick Test
 `````
+# test call to 09012345678 and say "Help! System ABC has down.".
 $ curl http://localhost:8888/notify.call -F 'json={"number":"09012345678","message":"Help! System ABC has down."}'
+
+# check boundio activity log
 $ tail -f /var/log/td-agent/td-agent.log
 `````
 
