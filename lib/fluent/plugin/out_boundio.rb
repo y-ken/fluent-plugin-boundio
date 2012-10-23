@@ -7,7 +7,7 @@ class Fluent::BoundioOutput < Fluent::Output
   config_param :user_serial_id, :string
   config_param :user_key, :string, :default => nil # Optional at this time
   config_param :api_key, :string
-  config_param :default_number, :string, :default => nil
+  config_param :default_number, :string, :default => ''
   config_param :default_voice, :string, :default => 'male'
   config_param :developer_tool, :string, :default => 'no'
 
