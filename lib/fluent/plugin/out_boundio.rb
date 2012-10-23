@@ -44,7 +44,7 @@ class Fluent::BoundioOutput < Fluent::Output
       query = 'key=' + @api_key + '&tel_to=' + number.gsub('-','') + '&cast=' + cast
       path = @developer_tool ? '/api/vd2/' : '/api/v2/'
       response = https.post(path + @user_serial_id + '/call', URI.escape(query))
-      $log.info "boundio: makeing a call to #{number} #{voice}: #{message} "
+      $log.info "boundio: makeing a call to #{number} and say '#{message}'"
       $log.info "boundio: call result: #{response.body}"
     rescue => e
       $log.error "boundio: Error: #{e.message}"
