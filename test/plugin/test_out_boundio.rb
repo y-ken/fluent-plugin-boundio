@@ -6,9 +6,9 @@ class BoundioOutputTest < Test::Unit::TestCase
   end
 
   CONFIG = %[
-    user_serial_id  YOUR_BOUNDIO_USER_SERIAL_ID
-    api_key         YOUR_BOUNDIO_API_KEY
-    user_key        YOUR_BOUNDIO_USER_KEY
+    user_serial_id  BOUNDIO_USER_SERIAL_ID
+    api_key         BOUNDIO_API_KEY
+    user_key        BOUNDIO_USER_KEY
     default_number  09012345678
   ]
 
@@ -21,15 +21,15 @@ class BoundioOutputTest < Test::Unit::TestCase
       d = create_driver('')
     }
     d = create_driver %[
-      user_serial_id  YOUR_BOUNDIO_USER_SERIAL_ID
-      api_key         YOUR_BOUNDIO_API_KEY
-      user_key        YOUR_BOUNDIO_USER_KEY
+      user_serial_id  BOUNDIO_USER_SERIAL_ID
+      api_key         BOUNDIO_API_KEY
+      user_key        BOUNDIO_USER_KEY
       default_number  09012345678
     ]
     d.instance.inspect
-    assert_equal 'YOUR_BOUNDIO_USER_SERIAL_ID', d.instance.user_serial_id
-    assert_equal 'YOUR_BOUNDIO_API_KEY', d.instance.api_key
-    assert_equal 'YOUR_BOUNDIO_USER_KEY', d.instance.user_key
+    assert_equal 'BOUNDIO_USER_SERIAL_ID', d.instance.user_serial_id
+    assert_equal 'BOUNDIO_API_KEY', d.instance.api_key
+    assert_equal 'BOUNDIO_USER_KEY', d.instance.user_key
     assert_equal '09012345678', d.instance.default_number
   end
 
