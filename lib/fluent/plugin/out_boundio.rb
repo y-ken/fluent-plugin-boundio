@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 class Fluent::BoundioOutput < Fluent::Output
   Fluent::Plugin.register_output('boundio', self)
 

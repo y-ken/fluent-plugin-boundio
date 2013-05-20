@@ -8,6 +8,9 @@ Fluentd Output plugin to make a call with boundio by KDDI. This Multilingual spe
 The release of KDDI, Boundio will be closed on the 30th Sep 2013.
 http://news.boundio.jp/2013/03/22/boudio%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E6%96%B0%E8%A6%8F%E5%8F%97%E4%BB%98%E7%B5%82%E4%BA%86%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/
 
+You can use twilio instead of boundio.  
+https://github.com/y-ken/fluent-plugin-twilio
+
 ## Installation
 
 ### native gem
