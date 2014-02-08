@@ -1,4 +1,4 @@
-fluent-plugin-boundio
+fluent-plugin-boundio, a plugin for [Fluentd](http://fluentd.org)
 =====================
 
 ## Overview
